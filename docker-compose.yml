@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./database:/var/lib/mysql
+      - ./docker.cnf:/etc/my.cnf 
+    ports:
+      - "3306:3306"
+    networks:
+      - webnet   
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: sunway123#
+      MYSQL_DATABASE: mm_wiki
+      MYSQL_USER: mm_wiki
+      MYSQL_PASSWORD: mm_wiki
+  web:
+    depends_on:
+      - db
+    image: qijunbo/mm_wiki
+    volumes:
+      - ./mm_wiki:/mm_wiki
+      - ./doc:/md
+    ports:
+      - "8080:8080"
+      - "8090:8090"
+    networks:
+      - webnet
+    restart: always
+networks:
+  webnet:
