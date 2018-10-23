@@ -3,10 +3,10 @@
 Usage:
 --
 
-- Download the latest version of (MM_wiki)[mm-wiki-linux-amd64.tar.gz](https://github.com/phachon/mm-wiki/releases/download/v0.1.1/mm-wiki-linux-amd64.tar.gz) from [here](https://github.com/phachon/mm-wiki/releases)
+- Download the latest version of (MM_wiki)[mm-wiki-linux-amd64.tar.gz](https://github.com/phachon/mm-wiki/releases/download/v0.1.1/mm-wiki-linux-amd64.tar.gz) from [here](https://github.com/phachon/mm-wiki/releases) we will need this file when we make the docker image.
 
 ~~~
-wget https://github.com/phachon/mm-wiki/releases/download/v0.1.1/mm-wiki-linux-amd64.tar.gz -o  mm-wiki-linux-amd64.tar.gz 
+wget https://github.com/phachon/mm-wiki/releases/download/v0.1.1/mm-wiki-linux-amd64.tar.gz -O  mm-wiki-linux-amd64.tar.gz 
 ~~~
 
 - Run the ``` build.sh ``` script to create the docker image.
