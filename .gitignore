@@ -20,7 +20,7 @@
 *.rar
 #folder
 database/
-doc/
+#doc/
 mm_wiki/
 *.gz
 
